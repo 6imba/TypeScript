@@ -1,0 +1,102 @@
+# 1:
+var salary:number; //inline annotaion
+salary = 785000;
+
+# 2:
+let myName:string = "Amir Shrestsha";
+let salary:number = 30000;
+let myBool:boolean = false;
+let myAny:any;
+
+# 3:
+let var1 = true; //implicit boolean casting
+var1 = "apple"; //Type 'string' is not assignable to type 'boolean'.
+
+# 4:
+let var2:any = true;
+var2 = "apple";
+
+# 5:
+let arrStr:string[];
+arrStr = ['apple','ball','cat']
+console.log(arrStr)
+
+# 6:
+let arrStr:string[]; ==> arrStr = ['apple','ball','cat']
+let arrNumb:number[]; ==> arrNumb = [1,2,3,4,5]
+
+# 7:
+let arrNumbErr:number[];
+arrNumb = ['1','2','3','4','5'] //Type 'string' is not assignable to type 'number'.
+console.log(arrNumbErr)
+
+# 8: Function with no return(return-type void)
+function myFunc1(): void{
+    console.log("Hello World!")
+}
+
+# 9: Function with return type.
+function myFunc1(): number{
+    return 999;
+}
+function myFunc1(): string{return "Amir Shrestha"}
+function myFunc1(): boolean{return true}
+
+# 10: Function with parameter(with return type ant no return type).
+let myFunc2 = (name:string, age:number) => {}  //inline annotaion
+let myFunc2 = (age:number):number => {return age+1}
+myFunc2("Amir", 22)
+
+# 11: Function with optional parameter.
+let myFunc2 = (name:string, age:number, role?:string) => {}  //inline annotaion
+myFunc2("Amir", 22)
+
+# 13: Function with parameter default value.
+let myFunc2 = (name:string, age:number, role:string = "anonomous") => {}  //inline annotaion
+myFunc2("Amir", 22)
+
+# 14: Function with object as parameter.
+let myFunc2 = (paraObj: {name:string, age:number}) => {} //inline annotaion
+myFunc3({name:"Amir", age:22})
+
+# 15: Function with object_destructure as parameter.
+let myFunc2 = ({name,age}: {name:string, age:number}) => {} //inline annotaion
+myFunc3({name:"Amir", age:22})
+
+# 16: Function with Rest Parameters.
+let myFunc2 = (name:string, age:number, ...rest: number[]) => {} //inline annotaion
+myFunc3({name:"Amir", age:22, c:3, d:4, e:5})
+
+# 17: Class{Fields, Constructors, Functions}.
+class Person{
+    property_1:number;
+    property_2:string;
+    property_3:boolean;
+    constructor(para_1:boolean){
+        this.property_2 = "Homo sapiens";
+        this.property_3 = para_1;
+    }
+    method_1(): void{
+        console.log("I am methoed_1!");
+    }
+    method_2(): string{
+        return "I am methoed_2!";
+    }
+}
+
+18: Interface.
+interface IsPerson{
+    name: string;
+    age: number;
+    speak(bool: boolean, language: string): void;
+    spend(amount: number): number;
+}
+
+19: object implements Interface:
+const person_1: IsPerson = {...}
+
+20 : object implements Interface:
+class Person implements IsPerson{...}
+
+21: 
+

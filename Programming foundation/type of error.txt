@@ -1,0 +1,18 @@
+# Error types:
+    - Compile time error (syntax error || semantic error)
+    - Run time error
+    - Logical error
+
+- A compile-time error generally refers to the errors that correspond to the semantics or syntax.
+- A runtime error refers to the error that we encounter during the code execution during runtime.
+- Logical error refers to wrong coding logic.
+
+- Write_code -> Compilation -> ByteCode -> Execution
+- Write_code -> Translation|Execution
+
+- Compilation vs Execution
+
+- error detection during compilation
+- error detection during interpretation
+- error detection during runtime
+- error detection by IDE.

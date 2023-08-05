@@ -1,0 +1,23 @@
+# Reference:
+    - https://www.youtube.com/watch?v=Vi8npxRMGac
+    - https://www.youtube.com/watch?v=3iLUls6Z_tw
+    - https://www.youtube.com/watch?v=jtXJP_BqXes
+    
+- compiler is a software program that transforms a program or code written in high-level-programming-language into low-level-machine readable-language.
+
+- Compiler takes less time when it comes to execution. 
+- Interpreter takes less time when it comes to translation. 
+
+- Compiler catches error at then time of compilation/translation even before executing code.
+- Interpreter catches error at then time of compilation/translation/execution.
+
+- Compiler, first translates language and then we can execute the translated code.
+- Interpreter translate and execute code at same time.
+
+- Compilation vs Execution
+
+# Java -> JavaCompiler
+# Python -> PythonInterpreter
+# TypeScript -> TypeScriptCompiler
+# JavaScript -> Browser_Engine(V8,Chakra)
+

@@ -1,0 +1,46 @@
+- JavaScript is a loosely typed language. It can be difficult to understand what types of data are being passed around in JavaScript.
+- TypeScript allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match.
+- For example, TypeScript will report an error when passing a string into a function that expects a number. JavaScript will not.
+- TypeScript uses compile time type checking. Which means it checks if the specified types match before running the code, not while running the code.
+
+- TypeScript is a typed superset of JavaScript, that compiles to plain JavaScript, with some additional features.
+- We can transpile/commpile TypeScript into multiple javascript flavour(ECMAScript).
+
+- Some of additional features:
+    > Strong/Static typing. ---> var message:string = "Hello World!";
+    > OOP
+    > Compile Time Error
+
+- But our browser,node doesn't understand TypeScript, as we know our browser only understand Vanilla JavaScript.
+    - So here our code editor automatically compile's/transpile's our TypeScript_code into JavaScript_Code.
+    - TypeScript_code_file + (TypeScript_compiler) -> Transpile/Compile => Plane_JavaScript
+
+- There are many ways to install TypeScript. One of the way is using nodejs.
+    > npm install -g typescript
+    > tsc -v (PowerShell Administration: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned)
+    > tsc.cmd -v
+
+- Create a new typescript file with extension .ts
+    > touch file.ts
+    > tsc.cmd file.ts ===> command, typescript compiler to transpile the .ts file into .js
+
+ 
+
+- In programming, implicit is often used to refer to something that's done for you by other code behind the scenes. Explicit is the manual approach to accomplishing the change you wish to have by writing out the instructions to be done explicitly.
+
+- var is accessible to its nearest-parent block whereas let is accessible to its nearest-self block only.
+    # Example:
+        {
+            {
+                var x =10;
+                let y =100;
+                console.log(y)
+            }
+            // console.log(y)
+        }
+        console.log(x)
+        // console.log(y)
+
+- In JavaScript type is defined implicitly(loosely/dynamically typed) whereas in TypeScript type is defined explicitly(strongly/statically typed). 
+
+- 

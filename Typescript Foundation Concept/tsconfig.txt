@@ -1,0 +1,4 @@
+- to avoid showing that error ==> in tsconfig.json file ==> "noImplicitAny": true
+- to avoid showing unused parameter error ==> in tsconfig.json file ==> "noUnusedParameter": true
+- to avoid error caused by function returning undefined ==> in tsconfig.json file ==> "noImplicitReturn": true
+- to avoid error caused by unused local ==> in tsconfig.json file ==> "noUnusedLocals": true

@@ -1,0 +1,6 @@
+- type aliases
+- combining types(unions and intersections)
+- type narrowing 
+- nullable types
+- unknown
+- never

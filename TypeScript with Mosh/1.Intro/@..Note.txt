@@ -1,0 +1,124 @@
+# Reference: https://www.youtube.com/watch?v=d56mG7DezGs&t=7s
+
+1. Introduction to TypeScript
+2. Setting up the development environment
+3. Creating first TypeScript program
+4. Configure the TypeScript compiler
+5. Debugging TypeScript applications
+
+**************************************************************************************************************
+
+1. Introduction to TypeScript:
+    - TypeScript is a programming language created at microsoft by Anders Hejlsberg.
+    - TypeScript is introduced to address some of shortcoming of JavaScript.
+    - TypeScript is a typed superset of JavaScript, that compiles to plain JavaScript, with some additional features.
+    - TypeScript is typed explicitly/strongly/statically.(TypeScript: explicitly/strongly/statically typed javascript)
+
+    > JavaScript is like a small brother who does what ever he like, whereas TypeScript is like a big brother with some discipline.
+    - Simply, TypeScript is a statically typed programming language built on top of JavaScript.
+    
+    > statically-typed:
+        - type of variables is determined at compile_time or while coding.
+        - assign type explicitly(set type of variable explicitly at the time of declaration).
+        - C++,C#,Java,TypeScript
+    > dynamically-typed:
+        - type of variable is determined at run time.
+        - assign type implicitly.
+        - Python,JavaScript,Ruby
+    # note:
+        - compilation process converts source code into machine code while as execution means that machine code is ready for processing.
+        - In general sense:
+            > compiling means converting source code into executable_code/machine_code/binary_code.
+            > executing means processing/executing/running, executable_code/machine_code/binary_code.
+
+# Reason to use TypeScript:
+    - Problem with dynamically-typed language is that we cannot know the type-error-issue, un till we execute/run-our_code/application,unit_test,production.
+    - So this is the problem typescript solves, as its find the type-error-issue in developement-enviroment(before production/unit-testing).
+    - So this is the problem typescript solves, as its find the type-error-issue while compiling before executing.
+    - Therefore, TypeScript is a JavaScript with type checking.
+
+# Steps:
+    1. write typescript.(code/file)
+    2. pass code to typescript compiler. (compiling/transpiling)
+    3. typeScript compiler, compiles the typescript code into javascript code.
+    4. error detection take place if exist in compile time (before executing javascript code).
+    5. if no error, typescript is transpile/compile into javascript. (this process is call transpilation)
+
+# Plane_JavaScript is suitable for simple small scale projects.
+# TypeScript is suitable for complex large scale projects.
+
+# TypeScript is compiled, rather than interpreted like JavaScript, which means errors can be caught before execution; IDEs that perform background incremental compilation can spot such errors during the coding process.
+
+************************************************************************************************************************************
+
+2. Setting up the development environment:
+
+    - To implement typescript, you should be able to transpile/commpile typeScript_code into Plane_JavaScript.
+    - So you need to install typescript-compiler to compile TypeScript into JavaScript.
+    - to install typescript-compiler you need npm(Node-Package-Manager).
+    - to have npm you should have node installed in your system.
+
+    # Therefore:
+        1. install node,
+        2. install npm,
+        3. install typescript compiler,
+        4. tsc -v or tsc.cmd -v (check typescript version)
+
+**************************************************************************************************************
+
+3. Creating first TypeScript program:
+    
+    - create .ts file.(typescript),
+    - write typescript code,
+    - commpile/transpile .ts file into .js file. ==> tsc.cmd filename.ts (by default typescript-commpiler, compiles typeScript_codeinto ES3_JS, but we can customize the compilation js_version via tsconfig.json file.)
+        - tsc.cmd --init (create tsconfig.json file which compilation configuration of all .ts file in the active project.)
+    - complie/transpile .ts file: tsc.cmd filename.ts
+    - run .js file formed after compilation. ==> node filename.js
+
+# ECMAScript is a standard or specification.
+# JavaScript is a implementation of that standard/specification.
+# TypeScript is JS with static type.
+
+**************************************************************************************************************
+
+4. Configure the TypeScript compiler:
+
+    - create tsconfig.ts file explicitly or create implicitly via tsc.cmd --init.
+
+    # tsconfig.json
+    - Configure the TypeScript compiler to target the specific_JS_version.
+    - You can customize the behavior of TypeScript-compiler, by passing required options via tsconfig.json file.
+    
+    # tsconfig.json file:
+        {
+            "compilerOptions": {
+                "target": "esnext",
+                ...
+            }
+        }
+
+    > Some of compiler options are:
+        - target: "JS_flavour" it denotes the flavour of JS that your TS code will be compiled to.
+        - watch: true ==> re-compile our file everytime we save the change.(that will save us from re-running tsc.cmd command after every change)
+        - lib: include typeIns for certain environment(DOM,ES2017,etc)_used_our_project.
+        - module: commonjs
+        - strict: true
+        - esModuleInterop: true
+        - skipLibCheck: true
+        - forceConsistentCastingInFileNames: true
+        - rootDir: "./"
+        - rootDir: "./src"
+        - outDir: "./dist"
+        - removeComments: true
+        - noEmitOnError: true
+
+**************************************************************************************************************
+
+5. Debugging TypeScript applications: 
+    - in tsconfig.json, uncomment "sourceMap": true, feature.
+        > then in cmd: tsc.cmd
+    - it will create index.js.map file
+    
+
+    // Node implictly annotate variable with no type to any, which will show error.
+    // to avoid showing that error ==> in tsconfig.json file ==> "noImplicitAny": true

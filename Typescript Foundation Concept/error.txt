@@ -1,0 +1,29 @@
+# In error.txt:
+    let name: "Amir Shrestha"
+
+    # error:
+        Cannot redeclare block-scoped variable 'name'.ts(2451)
+        lib.dom.d.ts(17694, 15): 'name' was also declared here.
+        declare const name: void;
+
+==> The name variable is declared somewhere in the typings for the DOM library, so the global type definition clashes with the local variable declaration.
+    You can solve the error, by converting your file to an ES module.
+    > export {};
+
+---------------------------------------------------------------------------------------------------------------------------
+
+    // Node implictly annotate variable with no type to any, which will show error.
+    // to avoid showing that error ==> in tsconfig.json file ==> "noImplicitAny": true
+    // to avoid showing unused parameter error ==> in tsconfig.json file ==> "noUnusedParameter": true
+    // to avoid error caused by function returning undefined ==> in tsconfig.json file ==> "noImplicitReturn": true
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# always try to avoid using to any type if possible. using typescript is useless if you have any type in your .ts file.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+    annotate means to give type to typescript variable explicitly/implicit;y.
+    
+---------------------------------------------------------------------------------------------------------------------------
+
